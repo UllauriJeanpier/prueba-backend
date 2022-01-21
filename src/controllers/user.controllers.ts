@@ -4,17 +4,9 @@ import { User } from '../entity/User'
 import { calculateAge } from '../utils/functions';
 
 export const postOne = async (req: Request, res: Response) => {
-  try{
-    const newUser = getRepository(User).create(req.body);
-    const results = await getRepository(User).save(newUser);
-    return res.status(201).json({ status: 200, msg: 'Creado exitosamente', data: results });
-  }catch (err){
-    console.log(err)
-    return res.status(500).json({
-      status:500,
-      error: err
-    })
-  }
+  const newUser = getRepository(User).create(req.body);
+  const results = await getRepository(User).save(newUser);
+  return res.status(201).json({ status: 200, msg: 'Creado exitosamente', data: results });
 }
 
 export const getAverage = async (req: Request, res: Response) => {
