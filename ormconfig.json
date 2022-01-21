@@ -1,11 +1,14 @@
 {
     "type": "postgres",
-    "host": "localhost",
+    "host": "ec2-3-225-41-234.compute-1.amazonaws.com",
     "port": "5432",
-    "username": "postgres",
-    "password": "12345",
-    "database": "postgres",
+    "username": "ebtlwsfulqwhkn",
+    "password": "aa1564e43c16ad867eff6c2c53d439cf878408cd2555d94bf7c478ccf385e644",
+    "database": "d8hhgqupt86bd3",
     "entities": ["dist/entity/**/*.js"],
     "logging": false,
-    "synchronize": true
+    "synchronize": true,
+    "extra": {
+      "ssl": "true"
+    }
   }

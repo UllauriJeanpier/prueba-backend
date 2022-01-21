@@ -14,7 +14,7 @@ class Server {
 
   constructor() {
     this.app = express()
-    this.port = config.PORT || '3000'
+    this.port = config.PORT || '4000'
     this.settingMidlewares()
     this.settingRoutes()
     this.settingErrorHandler()
